@@ -4,50 +4,41 @@
              xmlns:local="clr-namespace:layoutgithub"
              x:Class="layoutgithub.MainPage">
 
-    <StackLayout>
-        <BoxView Color="Blue">
-                    
-        </BoxView>
+    <StackLayout Spacing="0" Margin="0">
+        <StackLayout>
+            <BoxView Color="DodgerBlue"
+                     HeightRequest="60"
+                     HorizontalOptions="FillAndExpand"
+                     VerticalOptions="FillAndExpand">
+            </BoxView>
+        </StackLayout>
         <StackLayout BackgroundColor="Black"
                         Padding="70, 0, 70, 0">
             <Image Source="github.png"/>
         </StackLayout>
         <StackLayout>
-            <Label HorizontalOptions="Center" 
-                   FontSize="Large" TextColor="Blue">
-                Nombre de Usuario
+            <Label Text=" Nombre de Usuario" FontSize="Large" TextColor="Purple">
+               
             </Label>
-            <TableView Intent="Form">
-                <TableSection Title="Usuario">
-                <EntryCell x:Name="txtEdad"
+            
+            <Entry x:Name="txtEdad" HorizontalOptions="FillAndExpand"
                                 Label="Edad"
                                 Placeholder="Ingrese la Edad">
-                </EntryCell>
-                </TableSection>
-                <TableSection>
-                    <EntryCell x:Name="txtIntereses"
+            </Entry>
+            <Entry x:Name="txtIntereses" HorizontalOptions="FillAndExpand"
                                Label="Intereses"
                                Placeholder="Ingrese sus intereses">
-                    </EntryCell>
-                    <EntryCell x:Name="txtAprende"
+            </Entry>
+            <Entry x:Name="txtAprende" HorizontalOptions="FillAndExpand"
                                Label="Aprende"
-                               Placeholder="Xamarin Forms, ASP.NET"></EntryCell>
-                </TableSection>
-                <TableSection>
-                    <EntryCell x:Name="txtOtro"
+                               Placeholder="Xamarin Forms, ASP.NET"></Entry>
+            <Entry x:Name="txtOtro" HorizontalOptions="FillAndExpand"
                                Label="Otro"
-                               Placeholder="Ingrese Otro"></EntryCell>
-                </TableSection>
-            </TableView>
+                               Placeholder="Ingrese Otro">
+                
+            </Entry>
         </StackLayout>
-        <StackLayout>
-            <Label Text="Nombre de Usuario" HorizontalOptions="Center"></Label>
-            <TableView Intent="Form">
-                <TableSection Title="Usuario"></TableSection>
-            </TableView>
-            <Label Text="Edad" HorizontalOptions="Start"></Label>
-            <Entry Placeholder="Ingrese la edad"></Entry>
-        </StackLayout>
+        
     </StackLayout>
     
 
