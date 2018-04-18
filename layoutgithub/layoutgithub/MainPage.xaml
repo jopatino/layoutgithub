@@ -4,8 +4,51 @@
              xmlns:local="clr-namespace:layoutgithub"
              x:Class="layoutgithub.MainPage">
 
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <StackLayout>
+        <BoxView Color="Blue">
+                    
+        </BoxView>
+        <StackLayout BackgroundColor="Black"
+                        Padding="70, 0, 70, 0">
+            <Image Source="github.png"/>
+        </StackLayout>
+        <StackLayout>
+            <Label HorizontalOptions="Center" 
+                   FontSize="Large" TextColor="Blue">
+                Nombre de Usuario
+            </Label>
+            <TableView Intent="Form">
+                <TableSection Title="Usuario">
+                <EntryCell x:Name="txtEdad"
+                                Label="Edad"
+                                Placeholder="Ingrese la Edad">
+                </EntryCell>
+                </TableSection>
+                <TableSection>
+                    <EntryCell x:Name="txtIntereses"
+                               Label="Intereses"
+                               Placeholder="Ingrese sus intereses">
+                    </EntryCell>
+                    <EntryCell x:Name="txtAprende"
+                               Label="Aprende"
+                               Placeholder="Xamarin Forms, ASP.NET"></EntryCell>
+                </TableSection>
+                <TableSection>
+                    <EntryCell x:Name="txtOtro"
+                               Label="Otro"
+                               Placeholder="Ingrese Otro"></EntryCell>
+                </TableSection>
+            </TableView>
+        </StackLayout>
+        <StackLayout>
+            <Label Text="Nombre de Usuario" HorizontalOptions="Center"></Label>
+            <TableView Intent="Form">
+                <TableSection Title="Usuario"></TableSection>
+            </TableView>
+            <Label Text="Edad" HorizontalOptions="Start"></Label>
+            <Entry Placeholder="Ingrese la edad"></Entry>
+        </StackLayout>
+    </StackLayout>
+    
 
 </ContentPage>
